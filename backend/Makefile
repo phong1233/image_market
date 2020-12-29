@@ -2,4 +2,4 @@ install:
 	pip3 install -r requirements.txt
 
 start:
-	python3 wsgi.py
+	python3 app.py

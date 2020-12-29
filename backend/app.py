@@ -1,16 +1,20 @@
 from flask import Flask
+from flask_mongoengine import MongoEngine
 from flask_cors import CORS
+from app.image.controller import image_routes
+from app.helpers.mongo.mongo_setup import db_connection
 
-def create_app(application_name: str):
-    app = Flask(application_name, instance_relative_config=False)
+app = Flask(__name__)
 
-    CORS(app)
+CORS(app)
 
-    app.url_map.strict_slashes = False
+app.url_map.strict_slashes = False
+app.register_blueprint(image_routes, url_prefix='/image')
 
-    @app.route('/')
-    def root():
-        return '{name} is running'.format(name = application_name)
+@app.route('/')
+def root():
+    return 'app is running'
 
-    root()
-    return app
+root()
+
+app.run()
