@@ -8,8 +8,8 @@ image_routes = Blueprint('image_routes', __name__)
 
 @image_routes.route('/', methods=['GET'])
 @return_json
-def initial_route():
-    return "image route"
+def get_all_images():
+    return image_service.get_all_images()
 
 @image_routes.route('/', methods=['POST'])
 @return_json

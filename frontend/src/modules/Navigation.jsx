@@ -8,8 +8,10 @@ import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import PublishIcon from '@material-ui/icons/Publish';
 import InfoIcon from '@material-ui/icons/Info';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import HomeIcon from '@material-ui/icons/Home';
 
 import UploadPage from './UploadPage';
+import ImagePage from './ImagePage';
 
 const useStyles = makeStyles({
   root: {
@@ -38,9 +40,10 @@ export default function Navigation() {
   return (
     <Router>
       <BottomNavigation value={currentPage} onChange={handleChange} className={classes.root}>
-        <BottomNavigationAction component={Link} to='/' label='Home' value='home' icon={<InfoIcon />} />
+        <BottomNavigationAction component={Link} to='/' label='Home' value='home' icon={<HomeIcon />} />
         <BottomNavigationAction component={Link} to='/images' label='Images' value='images' icon={<PhotoLibraryIcon />} />
         <BottomNavigationAction component={Link} to='/upload' label='Upload' value='upload' icon={<PublishIcon />} />
+        <BottomNavigationAction component={Link} to='/info' label='Info' value='info' icon={<InfoIcon />} />
         <BottomNavigationAction component={Link} to='/buy' label='Buy' value='buy' icon={<ShoppingCartIcon />} />
       </BottomNavigation>
       <main>
@@ -48,6 +51,7 @@ export default function Navigation() {
           <Route path='/' exact component={HomePage}/>
           <Route path='/images' exact component={ImagePage}/>
           <Route path='/upload' exact component={UploadPage}/>
+          <Route path='/info' exact component={InfoPage}/>
           <Route path='/buy' component={BuyingPage}/>
           <Route path='/' component={NotFound}/>
         </Switch>
@@ -64,10 +68,10 @@ function HomePage() {
   );
 }
 
-function ImagePage() {
+function InfoPage() {
   return (
     <div>
-      ImagePage
+      InfoPage
     </div>
   );
 }
@@ -75,7 +79,7 @@ function ImagePage() {
 function BuyingPage() {
   return (
     <div>
-      UploadPage
+      BuyingPage
     </div>
   );
 }

@@ -52,3 +52,6 @@ class Service:
 
         existing.delete()
         return response_code_and_message(200, 'Image has been deleted')
+
+    def get_all_images(self):
+        return Image.get_all_images()

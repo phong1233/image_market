@@ -45,25 +45,21 @@ export default function UploadPage() {
   }
 
   const handleNameChange = (e) => {
-    console.log(e.target.value);
     setName(e.target.value);
     verifyInput();
   }
 
   const handleDescriptionChange = (e) => {
-    console.log(e.target.value);
     setDescription(e.target.value);
     verifyInput();
   }
 
   const handlePriceChange = (e) => {
-    console.log(e.target.value);
     setPrice(e.target.value);
     verifyInput();
   }
 
   const handleLinkChange = (e) => {
-    console.log(e.target.value);
     setLink(e.target.value);
     verifyInput();
   }
@@ -73,7 +69,6 @@ export default function UploadPage() {
   }
 
   const uploadImage = () => {
-    console.log("uploaded");
     fetch('http://localhost:5000/image/', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
