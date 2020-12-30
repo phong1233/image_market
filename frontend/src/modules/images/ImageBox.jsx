@@ -73,6 +73,26 @@ export default function ImageBox(props) {
   const handleClose = () => {
     setNotify(false);
   }
+
+  const handlePurchase = () => {
+    fetch('http://localhost:5000/transaction', {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+       "name": props.image.name
+      })
+    })
+    .then(res => res.json())
+    .then(
+      (result) => {
+        setMessage(result.responseMessage);
+        setNotify(true);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
   
   const handleSaveEdit = () => {
     fetch('http://localhost:5000/image/edit', {
@@ -134,8 +154,8 @@ export default function ImageBox(props) {
         </CardContent>
         { props.buying ? 
         <CardActions className={classes.action}>
-          <Button size='small' variant='contained' color='secondary'>
-            Buy
+          <Button size='small' variant='contained' color='secondary' onClick={handlePurchase}>
+            Purchase
           </Button>
         </CardActions>
         :

@@ -14,15 +14,15 @@ const useStyles = makeStyles({
   }
 });
 
-export default function ImagePage() {
+export default function StorePage() {
   const classes = useStyles();
 
   return(
     <div>
       <Typography className={classes.title} variant='h3'>
-        Images
+        Store
       </Typography>
-      <ImageList></ImageList>
+      <ImageList buying></ImageList>
     </div>
   );
 }

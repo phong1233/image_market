@@ -55,3 +55,6 @@ class Service:
 
     def get_all_images(self):
         return Image.get_all_images()
+    
+    def get_image_from_name(self, name):
+        return Image.get_image_from_name(name)

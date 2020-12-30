@@ -12,6 +12,8 @@ import HomeIcon from '@material-ui/icons/Home';
 
 import UploadPage from './UploadPage';
 import ImagePage from './ImagePage';
+import StorePage from './StorePage';
+import InfoPage from './InfoPage';
 
 const useStyles = makeStyles({
   root: {
@@ -44,7 +46,7 @@ export default function Navigation() {
         <BottomNavigationAction component={Link} to='/images' label='Images' value='images' icon={<PhotoLibraryIcon />} />
         <BottomNavigationAction component={Link} to='/upload' label='Upload' value='upload' icon={<PublishIcon />} />
         <BottomNavigationAction component={Link} to='/info' label='Info' value='info' icon={<InfoIcon />} />
-        <BottomNavigationAction component={Link} to='/buy' label='Buy' value='buy' icon={<ShoppingCartIcon />} />
+        <BottomNavigationAction component={Link} to='/store' label='Store' value='store' icon={<ShoppingCartIcon />} />
       </BottomNavigation>
       <main>
         <Switch>
@@ -52,7 +54,7 @@ export default function Navigation() {
           <Route path='/images' exact component={ImagePage}/>
           <Route path='/upload' exact component={UploadPage}/>
           <Route path='/info' exact component={InfoPage}/>
-          <Route path='/buy' component={BuyingPage}/>
+          <Route path='/store' component={StorePage}/>
           <Route path='/' component={NotFound}/>
         </Switch>
       </main>
@@ -64,22 +66,6 @@ function HomePage() {
   return (
     <div>
       HomePage
-    </div>
-  );
-}
-
-function InfoPage() {
-  return (
-    <div>
-      InfoPage
-    </div>
-  );
-}
-
-function BuyingPage() {
-  return (
-    <div>
-      BuyingPage
     </div>
   );
 }
