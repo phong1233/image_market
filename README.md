@@ -30,13 +30,13 @@ This application is intended the [Shopify Challenge for Web Developer interns](h
 ## Screenshots
 
 ### Image Repository
-![Screenshot Repository](github/screenshots/repository.png) 
+![Screenshot Repository](https://github.com/phong1233/image_market/tree/master/screenshots/repository.png) 
 
 ### Upload Page
-![Screenshot Upload page](github/screenshots/upload.png) 
+![Screenshot Upload page](https://github.com/phong1233/image_market/tree/master/screenshots/upload.png) 
 
 ### Transaction Page
-![Screenshot Transaction page](github/screenshots/transactions.png) 
+![Screenshot Transaction page](https://github.com/phong1233/image_market/tree/master/screenshots/transactions.png) 
 
 ### Store page
-![Screenshot Transaction page](github/screenshots/store.png) 
+![Screenshot Transaction page](https://github.com/phong1233/image_market/tree/master/screenshots/store.png) 
