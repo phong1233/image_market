@@ -20,8 +20,7 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     position: 'fixed',
-    bottom: 0,
-    zIndex: 999
+    bottom: 0
   },
 });
 

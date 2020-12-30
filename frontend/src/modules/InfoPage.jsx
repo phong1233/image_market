@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     width: '100%',
     justifyContent: 'center',
     marginTop: '20px',
-    marginBottom: '50px'
+    marginBottom: '80px'
   }
 });
 
@@ -45,7 +45,7 @@ export default function StorePage() {
         Transaction History
       </Typography>
       <TransactionTable transactions={transactions}></TransactionTable>
-      <Typography className={classes.title} variant='h5'>
+      <Typography className={classes.subtitle} variant='h5'>
         {`Total revenue: ${total}$`}
       </Typography>
     </div>
