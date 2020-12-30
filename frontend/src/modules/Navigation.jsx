@@ -14,6 +14,7 @@ import UploadPage from './UploadPage';
 import ImagePage from './ImagePage';
 import StorePage from './StorePage';
 import InfoPage from './InfoPage';
+import HomePage from './HomePage';
 
 const useStyles = makeStyles({
   root: {
@@ -59,14 +60,6 @@ export default function Navigation() {
         </Switch>
       </main>
     </Router>
-  );
-}
-
-function HomePage() {
-  return (
-    <div>
-      HomePage
-    </div>
   );
 }
 
